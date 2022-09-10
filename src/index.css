@@ -19,6 +19,8 @@ a{
 @import './styles/components/home-page/ProductsView.css';
 @import './styles/components/home-page/ProductCard.css';
 
+@import './styles/pages/ProductPage.css';
+
 :root{
     --primary-color: #e4e6e8;
     --green-color: #6ed16e;
