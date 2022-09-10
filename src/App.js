@@ -5,7 +5,9 @@ import {Routes, Route} from 'react-router-dom';
 function App() {
   return (
     <div className="App">
-        <h1>E-Commerce Site</h1>
+        <Routes>
+          <Route path='/' ></Route>
+        </Routes>
     </div>
   );
 }
