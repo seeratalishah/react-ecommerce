@@ -12,8 +12,10 @@ a{
     text-decoration: none;
 }
 
+
 @import './styles/components/layout/NavBar.css';
 @import './styles/components/home-page/Header.css';
+@import './styles/Layout.css';
 
 :root{
     --primary-color: #e4e6e8;

@@ -1,4 +1,17 @@
 .header{
-    padding: 120px 0;
+    padding: 120px 20px;
     background-color: var(--green-color);
+}
+
+.header input{
+    padding: 8px 16px;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid var(--primary-color);
+    width: 100%;
+}
+
+.header input:focus{
+    border-color: var(--green-color);
+    outline-color: var(--green-color);
 }
