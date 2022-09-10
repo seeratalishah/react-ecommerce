@@ -11,6 +11,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path='/' element={<HomePage />} ></Route>
+          <Route path='/product' element={}></Route>
         </Routes>
         <Footer />
     </div>

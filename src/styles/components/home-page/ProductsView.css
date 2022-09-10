@@ -1,4 +1,24 @@
 .products-view{
     padding-block: 60px;
+    display: grid;
+    gap: 1.5rem;
+}
+
+@media screen and (min-width: 576px){
+    .products-view{
+        grid-template-columns:  repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 968px){
+    .products-view{
+        grid-template-columns:  repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1260px){
+    .products-view{
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
