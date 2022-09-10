@@ -1,5 +1,5 @@
 .header{
-    padding: 120px 0;
+    padding: 160px 0;
     background-color: var(--green-color);
     background-image: url('/public/images/home.jpg');
     background-repeat: no-repeat;
@@ -14,9 +14,18 @@
     border-radius: 4px;
     border: 1px solid var(--primary-color);
     width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
 }
 
 .header input:focus{
     border-color: var(--green-color);
     outline-color: var(--green-color);
+}
+
+@media screen and (min-width: 768px){
+    .header{
+        padding: 240px 0;
+    }
 }
