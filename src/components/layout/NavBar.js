@@ -2,7 +2,7 @@ import React from "react";
 
 function NavBar() {
   return (
-    <nav className="container">
+    <nav>
       <div className="container">
         <div className="left-container">
           <svg

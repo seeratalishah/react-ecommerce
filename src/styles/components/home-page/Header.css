@@ -1,7 +1,12 @@
 .header{
-    padding: 120px 20px;
+    padding: 120px 0;
     background-color: var(--green-color);
+    background-image: url('/public/images/home.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
+
 
 .header input{
     padding: 8px 16px;
