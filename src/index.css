@@ -12,10 +12,12 @@ a{
     text-decoration: none;
 }
 
-
-@import './styles/components/layout/NavBar.css';
-@import './styles/components/home-page/Header.css';
 @import './styles/Layout.css';
+@import './styles/components/layout/NavBar.css';
+
+@import './styles/components/home-page/Header.css';
+@import './styles/components/home-page/ProductsView.css';
+@import './styles/components/home-page/ProductCard.css';
 
 :root{
     --primary-color: #e4e6e8;

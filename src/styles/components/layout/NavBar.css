@@ -9,7 +9,7 @@ nav .container{
     align-items: center;
 }
 
-nav .cart-button{
+.cart-button{
     padding: 0.2rem 0.5rem;
     border: none;
     background-color: var(--green-color);
