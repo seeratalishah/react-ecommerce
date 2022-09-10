@@ -13,6 +13,7 @@ a{
 }
 
 @import './styles/components/layout/NavBar.css';
+@import './styles/components/home-page/Header.css';
 
 :root{
     --primary-color: #e4e6e8;
