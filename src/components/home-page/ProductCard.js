@@ -1,28 +1,27 @@
-import React from 'react'
-function ProductCard({product}){
-    return(
-        <div className="product-card">
-        <img src={product.image}
-        alt={product.alt} />
+import React from "react";
+import { Link } from "react-router-dom";
 
-        <div className="product-data">
-          <h2>{product.title}</h2>
-          <p>
-            Price: <span>{product.price} PKR</span>
-          </p>
-          <p>Rating: {product.rating} star</p>
+function ProductCard({ product }) {
+  return (
+    <div className="product-card">
+      <img src={product.image} alt={product.alt} />
 
-          <div className="buttons-container">
-            <a href="/">View product</a>
+      <div className="product-data">
+        <h2>{product.title}</h2>
+        <p>
+          Price: <span>{product.price} PKR</span>
+        </p>
+        <p>Rating: {product.rating} star</p>
 
-            <button className="cart-btn">
-              <span class="material-icons-outlined">
-                add_shopping_cart
-              </span>
-            </button>
-          </div>
+        <div className="buttons-container">
+          <Link to={`/product/${product.id}`}>View product</Link>
+
+          <button className="cart-btn">
+            <span class="material-icons-outlined">add_shopping_cart</span>
+          </button>
         </div>
       </div>
-    )
+    </div>
+  );
 }
 export default ProductCard;
