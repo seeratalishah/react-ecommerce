@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+@import './styles/components/layout/NavBar.css';
+
+:root{
+    --primary-color: #e4e6e8;
+    --green-color: #6ed16e;
+    --white-color: #fff;
+}

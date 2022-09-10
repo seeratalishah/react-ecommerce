@@ -66,7 +66,20 @@ function NavBar() {
           ></path>
         </svg>
       </div>
-      <div className="right-container"></div>
+      <div className="right-container">
+        <select name="" id="" className="navbar-select-menu">
+          <option value="">Seerat Ali</option>
+          <option value="">Profile</option>
+          <option value="">Logout</option>
+          <option value="">Settings</option>
+          <option value="">Account</option>
+        </select>
+        <button className="cart-button">
+          <span class="material-icons-outlined">
+            add_shopping_cart
+          </span>
+        </button>
+      </div>
     </nav>
   );
 }

@@ -1,0 +1,26 @@
+nav{
+    padding: 1.3rem 3.5rem;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .cart-button{
+    padding: 0.2rem 0.5rem;
+    border: none;
+    background-color: var(--green-color);
+    color: var(--white-color);
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+nav .cart-button:hover{
+    background-color: black;
+}
+
+nav .right-container{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
