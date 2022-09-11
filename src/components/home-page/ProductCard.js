@@ -24,7 +24,7 @@ function ProductCard({ product }) {
           <Link to={`/product/${product.id}`}>View product</Link>
 
           <button className="cart-btn">
-            <span class="material-icons-outlined">add_shopping_cart</span>
+            <span className="material-icons-outlined">add_shopping_cart</span>
           </button>
         </div>
       </div>

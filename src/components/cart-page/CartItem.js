@@ -1,26 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
+import QuantityInput from "../common/QuantityInput";
 
-function CartItem({product}) {
-  return (
-    <div className="cart-item">
-      <img src={product.image} alt={product.alt} />
 
-      <div className="product-data">
-        <h2>{product.title}</h2>
-        <p>
-          Price: <span>{product.price} PKR</span>
-        </p>
+function CartItem({ product }) {
 
-        <div className="buttons-container">
-          <Link to={`/product/${product.id}`}>View product</Link>
+    const [quantity, setQuantity] = useState(0);
+    return (
+        <div className="cart-item">
+            <img src={product.image} alt={product.alt} />
 
-          <button className="cart-btn">
-            <span class="material-icons-outlined">add_shopping_cart</span>
-          </button>
+            <div className="product-data">
+                <h2>{product.title}</h2>
+                <p>
+                    Price: <span>{product.price} PKR</span>
+                </p>
+
+                <QuantityInput quantity={quantity} setQuantity={setQuantity} />
+            </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 }
 
 export default CartItem;

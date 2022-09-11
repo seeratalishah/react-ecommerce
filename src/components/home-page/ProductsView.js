@@ -1,14 +1,14 @@
 import React from "react";
 import ProductCard from "./ProductCard";
-import {products} from '../../data/products';
+// import {products} from '../../data/products';
 
-function ProductsView() {
+function ProductsView({shownProducts}) {
 
 
   return (
     <div className="container">
       <div className="products-view">
-        {products.map((product, index) => {
+        {shownProducts.map((product, index) => {
           return (
           <ProductCard key={index} product={product} />
           );

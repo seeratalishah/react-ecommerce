@@ -1,0 +1,44 @@
+.cart-page .flex-container{
+    flex-direction: column;
+    align-items: stretch;
+}
+
+@media screen and (min-width:576px)
+{
+    .cart-page .flex-container{
+        flex-direction: row;
+    }
+}
+
+.delivery-fee-container, .total-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+
+.delivery-fee-container span:first-child, .total-container span:first-child{
+    font-weight: 600;
+}
+
+.total-container{
+    background-color: orange;
+    color: var(--white-color);
+    width: max-content;
+    padding: 6px;
+    border-radius: 3px;
+}
+
+.flex-container .complete-order{
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: black;
+    color: var(--white-color);
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+
+

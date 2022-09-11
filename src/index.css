@@ -20,6 +20,10 @@ a{
 @import './styles/components/home-page/ProductCard.css';
 
 @import './styles/pages/ProductPage.css';
+@import './styles/components/cart-page/CartItem.css';
+@import './styles/components/cart-page/index.css';
+
+@import './styles/components/order-page/index.css';
 
 :root{
     --primary-color: #e4e6e8;

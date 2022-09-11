@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import QuantityInput from '../common/QuantityInput';
 
 function ProductDetail({ product }) {
   const [quantity, setQuantity] = useState(0);
@@ -19,19 +20,7 @@ function ProductDetail({ product }) {
         </p>
 
         <div className="flex-container">
-          <div className="quantity-container">
-            <button disabled={!quantity} onClick={() => setQuantity(quantity - 1)}>
-              <span class="material-icons-outlined">
-                remove
-              </span>
-            </button>
-            <input type="number" min="0" value={quantity} />
-            <button  onClick={() => setQuantity(quantity + 1)}>
-              <span class="material-icons-outlined">
-                add
-              </span>
-            </button>
-          </div>
+          <QuantityInput quantity={quantity} setQuantity={setQuantity} />
 
           <button className="add-to-cart-button" disabled={!quantity}>
             Add to cart
