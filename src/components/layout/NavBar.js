@@ -1,6 +1,6 @@
 import React from "react";
 
-function NavBar() {
+function NavBar({state}) {
   return (
     <nav>
       <div className="container">
@@ -70,6 +70,9 @@ function NavBar() {
         <div className="right-container">
           <button className="cart-button">
             <span className="material-icons-outlined">add_shopping_cart</span>
+            {
+              state.cart.length? <span className="total-items" >{state.cart.length}</span> : null 
+            }
           </button>
         </div>
       </div>
