@@ -4,8 +4,14 @@ import { Link } from "react-router-dom";
 function ProductCard({ product, state, dispatch }) {
  
   const addProductToCart = ()=>{
-    
-  }
+    dispatch({ 
+      type: 'ADD_PRODUCT_TO_CART',
+      payload:{
+           id: product.id, 
+           quantity: 1
+}
+})
+  };
 
 
   return (
