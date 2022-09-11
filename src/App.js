@@ -9,6 +9,7 @@ import Footer from './components/layout/Footer';
 import CartPage from './pages/CartPage';
 import OrderPage from './pages/OrderPage';
 import ReducerPage from './pages/ReducerPage';
+import { useReducer } from 'react';
 
 //Tasks to perform
 
@@ -22,7 +23,7 @@ const initialState = {
   cart: []
 };
 
-const cartReducer =(state, action)=>{
+const cartReducer = (state, action)=>{
   switch(action.type){
     case 'ADD_PRODUCT_TO_CART':
       return {
@@ -40,11 +41,13 @@ const cartReducer =(state, action)=>{
 
 
 function App() {
+
+  const [state, dispatch] = useReducer(cartReducer, initialState);
   return (
     <div className="App">
         <NavBar />
         <Routes>
-          <Route path='/' element={<HomePage />} ></Route>
+          <Route path='/' element={<HomePage state={state} dispatch={dispatch} />} ></Route>
           <Route path='/product/:id' element={<ProductPage />}></Route>
           <Route path='/cart' element={<CartPage />}></Route>
           <Route path='/order' element={<OrderPage />} ></Route>
