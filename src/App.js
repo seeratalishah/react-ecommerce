@@ -20,7 +20,22 @@ import ReducerPage from './pages/ReducerPage';
 
 const initialState = {
   cart: []
-}
+};
+
+const cartReducer =(state, action)=>{
+  switch(action.type){
+    case 'ADD_PRODUCT_TO_CART':
+      return {
+        cart:[
+          ...state.cart,
+          action.payload
+        ]
+      }
+
+      default:
+        throw new Error('No action found');
+  }
+};
 
 
 
