@@ -8,6 +8,20 @@ import NavBar from './components/layout/NavBar';
 import Footer from './components/layout/Footer';
 import CartPage from './pages/CartPage';
 import OrderPage from './pages/OrderPage';
+import ReducerPage from './pages/ReducerPage';
+
+//Tasks to perform
+
+//Add product to cart --> save product data and quantity.
+//Update Quantity of product in cart.
+//clear cart when order is placed.
+
+//Define initial state
+
+const initialState = {
+  cart: []
+}
+
 
 
 function App() {
@@ -19,7 +33,7 @@ function App() {
           <Route path='/product/:id' element={<ProductPage />}></Route>
           <Route path='/cart' element={<CartPage />}></Route>
           <Route path='/order' element={<OrderPage />} ></Route>
-          <Route path='/reducer' element={} ></Route>
+          <Route path='/reducer' element={<ReducerPage />} ></Route>
         </Routes>
         <Footer />
     </div>
