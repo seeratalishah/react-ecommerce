@@ -3,7 +3,7 @@ import Header from '../components/home-page/Header'
 import ProductsView from '../components/home-page/ProductsView'
 import { products } from './../data/products';
 
-function HomePage() {
+function HomePage({state, dispatch}) {
   const [search, setSearch] = useState('');
   const [shownProducts, setShownProducts] = useState(products);
 
@@ -23,7 +23,7 @@ function HomePage() {
   return (
     <div>
       <Header search={search} setSearch={setSearch} total={shownProducts.length}  />
-      <ProductsView shownProducts={shownProducts}/>
+      <ProductsView shownProducts={shownProducts} state={state} dispatch={dispatch} />
     </div>
   )
 }

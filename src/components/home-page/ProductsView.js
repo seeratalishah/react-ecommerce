@@ -2,7 +2,7 @@ import React from "react";
 import ProductCard from "./ProductCard";
 // import {products} from '../../data/products';
 
-function ProductsView({shownProducts}) {
+function ProductsView({shownProducts, state, dispatch}) {
 
 
   return (
@@ -10,7 +10,7 @@ function ProductsView({shownProducts}) {
       <div className="products-view">
         {shownProducts.map((product, index) => {
           return (
-          <ProductCard key={index} product={product} />
+          <ProductCard key={index} product={product} state={state} dispatch={dispatch} />
           );
         })}
       </div>
