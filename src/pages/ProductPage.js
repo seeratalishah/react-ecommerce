@@ -6,9 +6,25 @@ import { products } from "../data/products";
 //Store the product in a state variable
 
 function ProductPage() {
+
+ 
+
   const { id } = useParams();
 
   const [product, setProduct] = useState(null);
+  const [quantity, setQuantity] = useState(0);
+
+  const increaseQuantity = ()=>{
+    setQuantity(quantity + 1);
+  }
+
+  const decreaseQuantity = ()=>{
+    if(quantity > 0)
+    {
+      setQuantity(quantity - 1);
+    }
+    
+  }
 
   useEffect(() => {
     const filteredProduct = products.find((product) => {
@@ -17,6 +33,12 @@ function ProductPage() {
 
     setProduct(filteredProduct);
   }, []);
+
+  const ratingArray = [];
+
+  for(let i =1; i<=product?.rating; i++){
+   ratingArray.push(i);
+  }
 
   return (
     <div className="container">
@@ -27,15 +49,21 @@ function ProductPage() {
         <div className="product-details">
           <h2>{product?.title}</h2>
           <p>{product?.price}</p>
-          <p>{product?.rating}</p>
+          <div className="rating-stars">
+        {
+           ratingArray.map(()=>{
+            return <span class="material-icons-outlined"> star</span>
+           })
+        }
+       </div>
 
           <div className="quantity">
-            <button>-</button>
-            <input type="number" />
-            <button>+</button>
+            <button onClick={decreaseQuantity} >-</button>
+            <input type="number" id="quantity" value={quantity} />
+            <button onClick={increaseQuantity} >+</button>
           </div>
 
-          <button>Add to cart</button>
+          <button className="cart-btn" >Add to cart</button>
         </div>
       </div>
     </div>

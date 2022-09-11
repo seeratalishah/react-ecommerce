@@ -28,3 +28,8 @@
     cursor: pointer;
     color: #fffcfc;
 }
+
+.rating-stars .material-icons-outlined{
+    font-size: 1rem;
+    color: orange;
+}

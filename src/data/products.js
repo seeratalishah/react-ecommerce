@@ -5,7 +5,7 @@ export const products = [
     alt: "Nike Air Green",
     title: "Nike Air Green",
     price: "6,000 PKR",
-    rating: "4 stars"
+    rating: 4
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const products = [
     alt: "Nike Air Black",
     title: "Nike Air Black",
     price: "10,000 PKR",
-    rating: "5 stars"
+    rating: 5
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export const products = [
     alt: "Converse Sneakers",
     title: "Converse Sneakers",
     price: "4,000 PKR",
-    rating: "3 stars"
+    rating: 3
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ export const products = [
     alt: "Nike Air Green",
     title: "Nike Air Green",
     price: "6,000 PKR",
-    rating: "4 stars"
+    rating: 4
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ export const products = [
     alt: "Nike Air Black",
     title: "Nike Air Black",
     price: "10,000 PKR",
-    rating: "5 stars"
+    rating: 5
   },
   {
     id: 6,
@@ -45,7 +45,7 @@ export const products = [
     alt: "Converse Sneakers",
     title: "Converse Sneakers",
     price: "4,000 PKR",
-    rating: "3 stars"
+    rating: 3
   },
   {
     id: 7,
@@ -53,7 +53,7 @@ export const products = [
     alt: "Converse Sneakers",
     title: "Converse Sneakers",
     price: "4,000 PKR",
-    rating: "3 stars"
+    rating: 3
   },
   {
     id: 8,
@@ -61,7 +61,7 @@ export const products = [
     alt: "Converse Sneakers",
     title: "Converse Sneakers",
     price: "4,000 PKR",
-    rating: "3 stars"
+    rating: 3
   },
   {
     id: 9,
@@ -69,7 +69,7 @@ export const products = [
     alt: "Converse Sneakers",
     title: "Converse Sneakers",
     price: "4,000 PKR",
-    rating: "3 stars"
+    rating: 3
   },
   {
     id: 10,
@@ -77,7 +77,7 @@ export const products = [
     alt: "Converse Sneakers",
     title: "Converse Sneakers",
     price: "4,000 PKR",
-    rating: "3 stars"
+    rating: 3
   },
   {
     id: 11,
@@ -85,7 +85,7 @@ export const products = [
     alt: "Converse Sneakers",
     title: "Converse Sneakers",
     price: "4,000 PKR",
-    rating: "3 stars"
+    rating: 3
   },
   {
     id: 12,
@@ -93,6 +93,6 @@ export const products = [
     alt: "Converse Sneakers",
     title: "Converse Sneakers",
     price: "4,000 PKR",
-    rating: "3 stars"
+    rating: 3
   },
 ];
