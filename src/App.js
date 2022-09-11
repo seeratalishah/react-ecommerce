@@ -47,7 +47,7 @@ function App() {
   console.log(state);
   return (
     <div className="App">
-        <NavBar />
+        <NavBar state={state} />
         <Routes>
           <Route path='/' element={<HomePage state={state} dispatch={dispatch} />} ></Route>
           <Route path='/product/:id' element={<ProductPage />}></Route>
