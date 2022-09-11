@@ -1,6 +1,9 @@
 nav{
     padding: 14px 0;
     background-color: var(--primary-color);
+    position: sticky;
+    top: 0;
+    opacity: 0.77;
 }
 
 nav .container{

@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 function ProductCard({ product, state, dispatch }) {
  
   const addProductToCart = ()=>{
+    if(!isProductAddedToCard){
+      
+    }
     dispatch({ 
       type: 'ADD_PRODUCT_TO_CART',
       payload:{
@@ -12,6 +15,11 @@ function ProductCard({ product, state, dispatch }) {
 }
 })
   };
+
+  const isProductAddedToCard = state.cart.find((cartProduct)=>{
+    return cartProduct.id === product.id;
+
+  })
 
 
   return (
@@ -28,7 +36,7 @@ function ProductCard({ product, state, dispatch }) {
         <div className="buttons-container">
           <Link to={`/product/${product.id}`}>View product</Link>
 
-          <button className="cart-btn" onClick={addProductToCart} >
+          <button className="cart-btn" disabled={isProductAddedToCard} onClick={addProductToCart} >
             <span className="material-icons-outlined">add_shopping_cart</span>
           </button>
         </div>

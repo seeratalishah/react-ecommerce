@@ -12,6 +12,10 @@ a{
     text-decoration: none;
 }
 
+.App{
+    position: relative;
+}
+
 @import './styles/Layout.css';
 @import './styles/components/layout/NavBar.css';
 

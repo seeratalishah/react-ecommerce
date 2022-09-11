@@ -1,6 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function NavBar({state}) {
+
+  const navigate = useNavigate();
+
+  const goToCartPage = ()=>{
+    navigate('/cart')
+
+  }
   return (
     <nav>
       <div className="container">
@@ -68,7 +76,7 @@ function NavBar({state}) {
           </svg>
         </div>
         <div className="right-container">
-          <button className="cart-button">
+          <button className="cart-button" onClick={goToCartPage}>
             <span className="material-icons-outlined">add_shopping_cart</span>
             {
               state.cart.length? <span className="total-items" >{state.cart.length}</span> : null 
