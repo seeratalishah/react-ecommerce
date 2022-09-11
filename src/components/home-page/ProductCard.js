@@ -1,12 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function ProductCard({ product }) {
-  const ratingArray = [];
-
-   for(let i =1; i<=product.rating; i++){
-    ratingArray.push(i);
-   }
+function ProductCard({ product, state, dispatch }) {
+ 
+  const addProductToCart = ()=>{
+    
+  }
 
 
   return (
@@ -23,7 +22,7 @@ function ProductCard({ product }) {
         <div className="buttons-container">
           <Link to={`/product/${product.id}`}>View product</Link>
 
-          <button className="cart-btn">
+          <button className="cart-btn" onClick={addProductToCart} >
             <span className="material-icons-outlined">add_shopping_cart</span>
           </button>
         </div>
