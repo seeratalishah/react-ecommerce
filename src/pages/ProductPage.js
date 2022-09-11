@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import ProductDetail from "../components/product-page/ProductDetail";
 import { products } from "../data/products";
 
 //Filter product from product array
@@ -12,60 +13,32 @@ function ProductPage() {
   const { id } = useParams();
 
   const [product, setProduct] = useState(null);
-  const [quantity, setQuantity] = useState(0);
-
-  const increaseQuantity = ()=>{
-    setQuantity(quantity + 1);
-  }
-
-  const decreaseQuantity = ()=>{
-    if(quantity > 0)
-    {
-      setQuantity(quantity - 1);
-    }
-    
-  }
+ 
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const filteredProduct = products.find((product) => {
       return product.id === Number(id);
     });
 
+   
+
     setProduct(filteredProduct);
+    setIsLoading(false);
   }, []);
 
-  const ratingArray = [];
-
-  for(let i =1; i<=product?.rating; i++){
-   ratingArray.push(i);
-  }
+if(isLoading)
+{
+  return <h1>Loading....</h1>
+}
 
   return (
     <div className="container">
-      <div className="product-page">
-        <div className="image">
-          <img src={product?.image} alt="" />
-        </div>
-        <div className="product-details">
-          <h2>{product?.title}</h2>
-          <p>{product?.price}</p>
-          <div className="rating-stars">
-        {
-           ratingArray.map(()=>{
-            return <span class="material-icons-outlined"> star</span>
-           })
-        }
-       </div>
-
-          <div className="quantity">
-            <button onClick={decreaseQuantity} >-</button>
-            <input type="number" id="quantity" value={quantity} />
-            <button onClick={increaseQuantity} >+</button>
-          </div>
-
-          <button className="cart-btn" >Add to cart</button>
-        </div>
-      </div>
+      <Link to='/' >
+      <span class="material-icons-outlined"> arrow_back_ios</span>
+       View all products
+      </Link>
+      <ProductDetail product={product} />
     </div>
   );
 }
