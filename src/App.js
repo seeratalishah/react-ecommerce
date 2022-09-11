@@ -51,7 +51,7 @@ function App() {
         <Routes>
           <Route path='/' element={<HomePage state={state} dispatch={dispatch} />} ></Route>
           <Route path='/product/:id' element={<ProductPage />}></Route>
-          <Route path='/cart' element={<CartPage />}></Route>
+          <Route path='/cart' element={<CartPage state={state} dispatch={dispatch} />}></Route>
           <Route path='/order' element={<OrderPage />} ></Route>
           <Route path='/reducer' element={<ReducerPage />} ></Route>
         </Routes>

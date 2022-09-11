@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { products } from "../data/products";
 import CartItem from "./../components/cart-page/CartItem";
 
-function CartPage() {
+function CartPage({state, dispatch}) {
   return (
     <div className="container cart-page">
       <Link to="/">
