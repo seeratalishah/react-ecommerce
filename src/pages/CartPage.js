@@ -4,6 +4,13 @@ import { products } from "../data/products";
 import CartItem from "./../components/cart-page/CartItem";
 
 function CartPage({state, dispatch}) {
+      
+      const filteredProducts = products.filter((product)=>{
+        return state.cart.find((cartProduct)=>{
+          return cartProduct.id === product.id;
+        })
+      })
+
   return (
     <div className="container cart-page">
       <Link to="/">
@@ -13,7 +20,7 @@ function CartPage({state, dispatch}) {
 
       <div className="cart-items-container">
         {products.slice(0, 4).map((product, index) => {
-          return <CartItem key={index} product={product} />;
+          return <CartItem key={index} product={product} state={state} />;
         })}
       </div>
 
